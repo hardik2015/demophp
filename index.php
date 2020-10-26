@@ -3,7 +3,7 @@ $php= htmlspecialchars($_GET['id']);
 $t= htmlspecialchars($_GET['ideee']);
 $stream=m3u82('http://erotixtv.com/'.$php.'.php',$t);
 $streamurl=search($stream,'file:"','"});');
-$streamurl=str_replace('http','https://iptvurl.herokuapp.com/up.php?url=http',$streamurl);
+$streamurl=str_replace('http','https://iptvurl.herokuapp.com/up.php/http',$streamurl);
 
 header ("Location: $streamurl");
 
