@@ -43,7 +43,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 'Accept-Language: es-ES,es;q=0.9,fr;q=0.8',
 'Connection: keep-alive',
 'Host: erotixtv.com',
-'Referer: http://erotixtv.com/'.$ideee.'.html',
+'Referer: http://erotix-tv.com/'.$ideee.'.html',
 'Upgrade-Insecure-Requests: 1',
 'User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36'
 
