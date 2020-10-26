@@ -1,10 +1,10 @@
 hyuhyhhuihuhujjjiiki
 <?php
 echo 'done';
-/*$php= htmlspecialchars($_GET['id']);
+$php= htmlspecialchars($_GET['id']);
 $t= htmlspecialchars($_GET['ideee']);
 echo $php;
-$stream=m3u82('http://erotixtv.com/'.$php.'.php',$t);
+/*$stream=m3u82('http://erotixtv.com/'.$php.'.php',$t);
 echo $stream;
 $streamurl=search($stream,'file:"','"});');
 $response = makeRequest($streamurl);
