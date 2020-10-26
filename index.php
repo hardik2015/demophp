@@ -1,7 +1,7 @@
 hyuhyhhuihuhujjjiiki
 <?php
-/*echo 'done';
-$php= htmlspecialchars($_GET['id']);
+echo 'done';
+/*$php= htmlspecialchars($_GET['id']);
 $t= htmlspecialchars($_GET['ideee']);
 echo $php;
 $stream=m3u82('http://erotixtv.com/'.$php.'.php',$t);
