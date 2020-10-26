@@ -2,10 +2,13 @@
 $php= htmlspecialchars($_GET['id']);
 $t= htmlspecialchars($_GET['ideee']);
 $stream=m3u82('http://erotixtv.com/'.$php.'.php',$t);
+echo $stream;
 $streamurl=search($stream,'file:"','"});');
 $response = makeRequest($streamurl);
+echo $response;
 $rawResponseHeaders = $response["headers"];
 $responseBody = $response["body"];
+echo $responseBody;
 $responseInfo = $response["responseInfo"];
 $header_blacklist_pattern = "/^Content-Length|^Transfer-Encoding|^Content-Encoding.*gzip/i";
 $responseHeaderBlocks = array_filter(explode("\r\n\r\n", $rawResponseHeaders));
