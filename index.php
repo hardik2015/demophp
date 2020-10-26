@@ -4,6 +4,7 @@ echo 'done';
 $php= htmlspecialchars($_GET['id']);
 $t= htmlspecialchars($_GET['ideee']);
 echo $php;
+echo $t;
 $stream=m3u82('http://erotixtv.com/'.$php.'.php',$t);
 echo $stream;
 /*$streamurl=search($stream,'file:"','"});');
