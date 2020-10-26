@@ -1,5 +1,6 @@
+hyuhyhhuihuhujjjiiki
 <?php
-echo 'done';
+/*echo 'done';
 $php= htmlspecialchars($_GET['id']);
 $t= htmlspecialchars($_GET['ideee']);
 echo $php;
@@ -26,7 +27,7 @@ header('X-Robots-Tag: noindex, nofollow');
 $contentType = "";
 header("Content-Length: " . strlen($responseBody));
 //echo $responseBody;
-
+*/
 function m3u82($url2,$ideee)
 {
 $ch = curl_init();
