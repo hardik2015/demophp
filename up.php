@@ -1,11 +1,7 @@
 <?php
 $url = substr($_SERVER["REQUEST_URI"], strlen($_SERVER["SCRIPT_NAME"]) + 1);
-echo $url;
-?>
-<?php
-$response = makeRequest($streamurl);
-echo $response;
-/*$rawResponseHeaders = $response["headers"];
+$response = makeRequest($url);
+$rawResponseHeaders = $response["headers"];
 $responseBody = $response["body"];
 $responseInfo = $response["responseInfo"];
 $header_blacklist_pattern = "/^Content-Length|^Transfer-Encoding|^Content-Encoding.*gzip/i";
@@ -51,7 +47,7 @@ if (!function_exists("getallheaders")) {
     }
     return $result;
   }
-}*/
+}
 define("PROXY_PREFIX", "http" . (isset($_SERVER['HTTPS']) ? "s" : "") . "://" . $_SERVER["SERVER_NAME"] . ($_SERVER["SERVER_PORT"] != 80 ? ":" . $_SERVER["SERVER_PORT"] : "") . $_SERVER["SCRIPT_NAME"] . "/");
 function makeRequest($url) {
   $user_agent = "vsaClient/1.0.6 (Linux;Android 5.1.1) ExoPlayerLib/1.5.14";
