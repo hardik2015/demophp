@@ -1,4 +1,5 @@
 <?php
+echo 'done';
 $php= htmlspecialchars($_GET['id']);
 $t= htmlspecialchars($_GET['ideee']);
 echo $php;
