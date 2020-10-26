@@ -1,13 +1,8 @@
-hyuhyhhuihuhujjjiiki
 <?php
-echo 'done';
 $php= htmlspecialchars($_GET['id']);
 $t= htmlspecialchars($_GET['ideee']);
-echo $php;
-echo $t;
 $stream=m3u82('http://erotixtv.com/'.$php.'.php',$t);
-echo $stream;
-/*$streamurl=search($stream,'file:"','"});');
+$streamurl=search($stream,'file:"','"});');
 $response = makeRequest($streamurl);
 echo $response;
 $rawResponseHeaders = $response["headers"];
@@ -27,8 +22,8 @@ foreach ($headerLines as $header) {
 header('X-Robots-Tag: noindex, nofollow');
 $contentType = "";
 header("Content-Length: " . strlen($responseBody));
-//echo $responseBody;
-*/
+echo $responseBody;
+
 function m3u82($url2,$ideee)
 {
 $ch = curl_init();
