@@ -4,6 +4,7 @@ echo $url;
 ?>
 <?php
 $response = makeRequest($streamurl);
+echo $response;
 /*$rawResponseHeaders = $response["headers"];
 $responseBody = $response["body"];
 $responseInfo = $response["responseInfo"];
