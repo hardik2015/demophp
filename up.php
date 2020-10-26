@@ -1,5 +1,6 @@
 <?php
 $php= htmlspecialchars($_GET['url']);
+echo $php;
 $response = makeRequest($streamurl);
 $rawResponseHeaders = $response["headers"];
 $responseBody = $response["body"];
