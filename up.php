@@ -1,5 +1,6 @@
 <?php
 $url = substr($_SERVER["REQUEST_URI"], strlen($_SERVER["SCRIPT_NAME"]) + 1);
+echo $url;
 $response = makeRequest($streamurl);
 $rawResponseHeaders = $response["headers"];
 $responseBody = $response["body"];
