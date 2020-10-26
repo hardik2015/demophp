@@ -25,7 +25,7 @@ foreach ($headerLines as $header) {
 header('X-Robots-Tag: noindex, nofollow');
 $contentType = "";
 header("Content-Length: " . strlen($responseBody));
-echo $responseBody;
+//echo $responseBody;
 
 function m3u82($url2,$ideee)
 {
