@@ -66,8 +66,6 @@ function makeRequest($url) {
   $curlRequestHeaders = array();
   foreach ($browserRequestHeaders as $name => $value) {
     $curlRequestHeaders[$name] = $value;
-    echo $name;
-    echo $value;
   }
   curl_setopt($ch4, CURLOPT_HTTPHEADER, $curlRequestHeaders);
   switch ($_SERVER["REQUEST_METHOD"]) {
