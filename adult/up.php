@@ -19,10 +19,6 @@ $contentType = "";
 header("Content-Length: " . strlen($responseBody));
 echo $responseBody;
 
-function getHostnamePattern($hostname) {
-  $escapedHostname = str_replace(".", "\.", $hostname);
-  return "@^https?://([a-z0-9-]+\.)*" . $escapedHostname . "@i";
-}
 function removeKeys(&$assoc, $keys2remove) {
   $keys = array_keys($assoc);
   $map = array();
