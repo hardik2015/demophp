@@ -1,8 +1,6 @@
 <?php
 $url = substr($_SERVER["REQUEST_URI"], strlen($_SERVER["SCRIPT_NAME"]) + 1);
 $response = makeRequest($url);
-$server = explode('index',$url);
-$serverurl = $server[0];
 $rawResponseHeaders = $response["headers"];
 $responseBody = $response["body"];
 $responseInfo = $response["responseInfo"];
@@ -19,7 +17,6 @@ foreach ($headerLines as $header) {
 header('X-Robots-Tag: noindex, nofollow');
 $contentType = "";
 header("Content-Length: " . strlen($responseBody));
-$responseBody = str_replace('2020', $serverurl.'2020',$responseBody);
 echo $responseBody;
 
 function getHostnamePattern($hostname) {
