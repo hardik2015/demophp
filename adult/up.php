@@ -19,31 +19,6 @@ $contentType = "";
 header("Content-Length: " . strlen($responseBody));
 echo $responseBody;
 
-function removeKeys(&$assoc, $keys2remove) {
-  $keys = array_keys($assoc);
-  $map = array();
-  foreach ($keys as $key) {
-     $map[strtolower($key)] = $key;
-  }
-  foreach ($keys2remove as $key) {
-    $key = strtolower($key);
-    if (isset($map[$key])) {
-       unset($assoc[$map[$key]]);
-    }
-  }
-}
-if (!function_exists("getallheaders")) {
-  function getallheaders() {
-    $result = array();
-    foreach($_SERVER as $key => $value) {
-      if (substr($key, 0, 5) == "HTTP_") {
-        $key = str_replace(" ", "-", ucwords(strtolower(str_replace("_", " ", substr($key, 5)))));
-        $result[$key] = $value;
-      }
-    }
-    return $result;
-  }
-}
 define("PROXY_PREFIX", "http" . (isset($_SERVER['HTTPS']) ? "s" : "") . "://" . $_SERVER["SERVER_NAME"] . ($_SERVER["SERVER_PORT"] != 80 ? ":" . $_SERVER["SERVER_PORT"] : "") . $_SERVER["SCRIPT_NAME"] . "/");
 function makeRequest($url) {
   $user_agent = "vsaClient/1.0.6 (Linux;Android 5.1.1) ExoPlayerLib/1.5.14";
