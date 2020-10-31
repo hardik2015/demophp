@@ -53,11 +53,6 @@ function makeRequest($url) {
   $ch4 = curl_init();
   curl_setopt($ch4, CURLOPT_USERAGENT, $user_agent);
   $browserRequestHeaders = getallheaders();
-  removeKeys($browserRequestHeaders, array(
-    "Host",
-    "Content-Length",
-    "Accept-Encoding"
-  ));
   curl_setopt($ch4, CURLOPT_ENCODING, "");
   $curlRequestHeaders = array();
   foreach ($browserRequestHeaders as $name => $value) {
