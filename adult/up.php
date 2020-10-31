@@ -19,7 +19,7 @@ foreach ($headerLines as $header) {
 header('X-Robots-Tag: noindex, nofollow');
 $contentType = "";
 header("Content-Length: " . strlen($responseBody));
-$responseBody = str_replace(',', ','.$serverurl,$responseBody);
+$responseBody = str_replace(',\n', ',\n'.$serverurl,$responseBody);
 echo $responseBody;
 
 function getHostnamePattern($hostname) {
