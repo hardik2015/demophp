@@ -2,7 +2,7 @@
 $url = substr($_SERVER["REQUEST_URI"], strlen($_SERVER["SCRIPT_NAME"]) + 1);
 $response = makeRequest($url);
 $server = split("index",$url);
-$servrurl = $server[0];
+$serverurl = $server[0];
 $rawResponseHeaders = $response["headers"];
 $responseBody = $response["body"];
 $responseInfo = $response["responseInfo"];
